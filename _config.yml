@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 name: Hank Quinlan, Horrible Cop
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+=======
+theme: jekyll-theme-minimal
+>>>>>>> cc39c3de48ec7a3a1c2233129b87eb5fb384f169
