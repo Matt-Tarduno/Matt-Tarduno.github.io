@@ -4,7 +4,7 @@ body {
     font-weight: 200;
 }
 nav ul, footer ul {
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: 200;
@@ -22,15 +22,15 @@ a:hover {
 }
 h1 {
     font-size: 2.5em;
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 }
 p { 
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 200;
-    line-height: 1.1em;
+    line-height: 1em;
     color: #333;
 }
 footer {
