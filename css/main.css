@@ -1,12 +1,13 @@
 body {
     margin: 60px auto;
     width: 70%;
+    font-weight: 200;
 }
 nav ul, footer ul {
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     padding: 0px;
     list-style: none;
-    font-weight: bold;
+    font-weight: 200;
 }
 nav ul li, footer ul li {
     display: inline;
