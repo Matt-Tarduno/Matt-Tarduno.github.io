@@ -22,9 +22,12 @@ a:hover {
 }
 h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 1.8em;
-    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-size: 1.0em;
     font-weight: 200;
+    line-height: 1.0em;
+    color: #333;
 }
 p { 
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
