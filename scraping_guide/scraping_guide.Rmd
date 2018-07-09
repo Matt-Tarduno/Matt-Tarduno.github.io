@@ -12,11 +12,11 @@ This page (currently under construction) hosts a collection of tools that I have
 
 **Beautiful Soup**
 
-Beautifulsoup is a python library for scraping HTML/XML. 
+[Beautifulsoup](https://www.crummy.com/software/BeautifulSoup/?) is a python library for scraping HTML/XML. Pretty neat.  
 
 **PDF Miner**
 
-Not all data is in HTML. Pros: you can get data from PDFs! Cons: Must be local.   
+Not all data is in HTML. Pros: you can get data from PDFs! Cons: Must be local. [Here](https://media.readthedocs.org/pdf/pdfminer-docs/latest/pdfminer-docs.pdf) is  the super boring to read documentation... a more friendly tutorial is coming soon.  
   
   
 **Amazon EC2 Instances**  
