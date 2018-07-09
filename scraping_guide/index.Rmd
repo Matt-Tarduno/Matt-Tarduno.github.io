@@ -25,7 +25,61 @@ Amazon offers super cheap (+ 1 year free!) cloud computing services. Why do you 
 
 If you want to scrape weather data for Ulaanbaatar every 60 seconds day in and day out, you should set up an Amazon EC2 instance. This will act as your own personal server. 
 
-Once you are set up, [connect to your amazon EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html){target="_blank"} using the terminal app. Then use the [screen](https://kb.iu.edu/d/acuy){target="_blank"} command to run your scraper. This will keep your code running even after you disconnect from youe EC2 instance, even after you shut down your computer, even after you throw your computer off a bridge, etc, etc. 
+Once you are set up (that is you've initiated an instance and you have an ssh key for that instance), [connect to your amazon EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html){target="_blank"} using the terminal app. There are a few steps to this. Here's what I had to do: 
+
+First, "use the chmod command to make sure that your private key file isn't publicly viewable." Whatever that means. 
+
+```{r engine = 'bash', eval = FALSE}
+chmod 600  path/to/key/keyname.pem
+```
+
+Then connect! 
+
+```{r engine = 'bash', eval = FALSE}
+ssh -v -i path/to/key/keyname.pem ec2-user@your_ec2_name
+```
+
+your_ec2_name is probably something like ec2-11-111-111-11.us-east-2.compute.amazonaws.com, except, you know, some of the 1's aren't 1's. Hopefully you've now connected to your instance. It's just like your terminal, but running in Ohio or something. 
+
+
+To copy files from your machine to your EC2 instance, run this chunk (mind the :~/ !):
+
+```{r engine = 'bash', eval = FALSE}
+scp -i path/to/key/keyname.pem -r path/to/folder/with/files ec2-user@your_ec2_name.compute.amazonaws.com:~/
+```
+
+
+Now all of your scraping stuff will be in your EC2 instance. You will probably need to install your dependencies still. Virtual environments (see below) are super helpful for this. 
+
+
+Next, use the [screen](https://kb.iu.edu/d/acuy){target="_blank"} command to run your scraper:
+
+```{r engine = 'bash', eval = FALSE}
+screen 
+
+#this opens up a virtual terminal, or 'screen' 
+
+python my_scraper.py 
+
+# maybe some output that indicates that your scraper has started 
+
+Ctrl-a d
+
+# so hold Control-a, then press d. This will detach the screen, but keep your program running
+
+```
+
+ 
+
+After you've `ctrl-a d`-ed out of your screen, you will be back at the EC2 command line. Simply type "exit" to disconnect. Using `screen` in this way will keep your code running even after you disconnect from youe EC2 instance, even after you shut down your computer, even after you throw your computer off a bridge, etc, etc. Nervous about your scraper? You can check it by re-connecting to your EC2 instance and typing `screen -r`. This "re-attaches" your screen, so you can check on its progress. 
+
+How do you get your super valuable data from your instance? Like this:  
+
+```{r engine = 'bash', eval = FALSE}
+
+scp -i path/to/key/keyname.pem -r ec2-user@your-instance-name.compute.amazonaws.com:~/your/file/ .
+
+```
 
 Desafortunadamente the documentation for EC2 instances is, well, poor. Stackoverflow is your friend. 
 

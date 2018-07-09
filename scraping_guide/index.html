@@ -127,16 +127,42 @@ $(document).ready(function () {
 
 <p>This page (currently under construction) hosts a collection of tools that I have found useful as an student/RA, mostly in the realm of data scraping. The hope is that some RA will stumble across this and save herself 200 hours of coyping data from pdfs.</p>
 <p><strong>Beautiful Soup</strong></p>
-<p><a href="https://www.crummy.com/software/BeautifulSoup/?">Beautifulsoup</a> is a python library for scraping HTML/XML. Pretty neat.</p>
+<p><a href="https://www.crummy.com/software/BeautifulSoup/?" target="_blank">Beautifulsoup</a> is a python library for scraping HTML/XML. Pretty neat.</p>
 <p><strong>PDF Miner</strong></p>
-<p>Not all data is in HTML. Pros: you can get data from PDFs! Cons: Must be local. <a href="https://media.readthedocs.org/pdf/pdfminer-docs/latest/pdfminer-docs.pdf">Here</a> is the super boring to read documentation… a more friendly tutorial is coming soon.</p>
+<p>Not all data is in HTML. Pros: you can get data from PDFs! Cons: Must be local. <a href="https://media.readthedocs.org/pdf/pdfminer-docs/latest/pdfminer-docs.pdf" target="_blank">Here</a> is the super boring to read documentation… a more friendly tutorial is coming soon.</p>
 <p><strong>Amazon EC2 Instances</strong></p>
 <p>Amazon offers super cheap (+ 1 year free!) cloud computing services. Why do you want to use this? You a) don’t have access to your own server b) don’t have a laptop you can devote to scraping 24/7.</p>
 <p>If you want to scrape weather data for Ulaanbaatar every 60 seconds day in and day out, you should set up an Amazon EC2 instance. This will act as your own personal server.</p>
-<p>Once you are set up, <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html">connect to your amazon EC2 instance</a> using the terminal app. Then use the <a href="https://kb.iu.edu/d/acuy">screen</a> command to run your scraper. This will keep your code running even after you disconnect from youe EC2 instance, even after you shut down your computer, even after you throw your computer off a bridge, etc, etc.</p>
+<p>Once you are set up (that is you’ve initiated an instance and you have an ssh key for that instance), <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html" target="_blank">connect to your amazon EC2 instance</a> using the terminal app. There are a few steps to this. Here’s what I had to do:</p>
+<p>First, “use the chmod command to make sure that your private key file isn’t publicly viewable.” Whatever that means.</p>
+<pre class="bash"><code>chmod 600  path/to/key/keyname.pem</code></pre>
+<p>Then connect!</p>
+<pre class="bash"><code>ssh -v -i path/to/key/keyname.pem ec2-user@your_ec2_name</code></pre>
+<p>your_ec2_name is probably something like ec2-11-111-111-11.us-east-2.compute.amazonaws.com, except, you know, some of the 1’s aren’t 1’s. Hopefully you’ve now connected to your instance. It’s just like your terminal, but running in Ohio or something.</p>
+<p>To copy files from your machine to your EC2 instance, run this chunk (mind the :~/ !):</p>
+<pre class="bash"><code>scp -i path/to/key/keyname.pem -r path/to/folder/with/files ec2-user@your_ec2_name.compute.amazonaws.com:~/</code></pre>
+<p>Now all of your scraping stuff will be in your EC2 instance. You will probably need to install your dependencies still. Virtual environments (see below) are super helpful for this.</p>
+<p>Next, use the <a href="https://kb.iu.edu/d/acuy" target="_blank">screen</a> command to run your scraper:</p>
+<pre class="bash"><code>screen 
+
+#this opens up a virtual terminal, or 'screen' 
+
+python my_scraper.py 
+
+# maybe some output that indicates that your scraper has started 
+
+Ctrl-a d
+
+# so hold Control-a, then press d. This will detach the screen, but keep your program running
+</code></pre>
+<p>After you’ve <code>ctrl-a d</code>-ed out of your screen, you will be back at the EC2 command line. Simply type “exit” to disconnect. Using <code>screen</code> in this way will keep your code running even after you disconnect from youe EC2 instance, even after you shut down your computer, even after you throw your computer off a bridge, etc, etc. Nervous about your scraper? You can check it by re-connecting to your EC2 instance and typing <code>screen -r</code>. This “re-attaches” your screen, so you can check on its progress.</p>
+<p>How do you get your super valuable data from your instance? Like this:</p>
+<pre class="bash"><code>
+scp -i path/to/key/keyname.pem -r ec2-user@your-instance-name.compute.amazonaws.com:~/your/file/ .
+</code></pre>
 <p>Desafortunadamente the documentation for EC2 instances is, well, poor. Stackoverflow is your friend.</p>
 <p><strong>Virtual Environments</strong></p>
-<p>Virtual environments are good practice when using python. This is because your projects may require a specific versions of a python library (like beautifulsoup!), and when you download libraries using, say, pip, they are just plopped into the site-packages directory. Virtual environments create an isolated set of directories that help you prevent these conflicts. So in general, if you have a project you should create a virtual environment specific to that project. More on virtual environments <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">here</a> and <a href="https://realpython.com/python-virtual-environments-a-primer/">here</a></p>
+<p>Virtual environments are good practice when using python. This is because your projects may require a specific versions of a python library (like beautifulsoup!), and when you download libraries using, say, pip, they are just plopped into the site-packages directory. Virtual environments create an isolated set of directories that help you prevent these conflicts. So in general, if you have a project you should create a virtual environment specific to that project. More on virtual environments <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/" target="_blank">here</a> and <a href="https://realpython.com/python-virtual-environments-a-primer/" target="_blank">here</a></p>
 <pre class="bash"><code>pip install virtualenv
 cd my_project_folder
 virtualenv venv_my_project</code></pre>
