@@ -1,0 +1,39 @@
+---
+title: Useful Things
+---
+
+========================================================
+  
+This page (currently under construction) hosts a collection of tools that I have found useful as an student/RA, mostly in the realm of data scraping. The hope is that some RA will stumble across this and save herself 200 hours of coyping data from pdfs. 
+
+**Beautiful Soup**
+
+Beautifulsoup is a python library for scraping HTML/XML. 
+
+**PDF Miner**
+
+Not all data is in HTML. Pros: you can get data from PDFs! Cons: Must be local.   
+  
+  
+**Amazon EC2 Instances**  
+  
+Amazon offers super cheap (+ 1 year free!) cloud computing services. Why do you want to use this? You a) don't have access to your own server b) don't have a laptop you can devote to scraping 24/7. Desafortunadamente the documentation for EC2 instances is, well, poor. 
+
+
+**Virtual Environments**
+
+Virtual environments are good practice when using python. This is because your projects may require a specific versions of a python library (like beautifulsoup!), and when you download libraries using, say pip, they are just plopped into the site-packages directory. 
+Virtual environments create an isolated set of directories that help you prevent these conflicts. So in general, if you have a project, you should create a virtual environment specific to that project. 
+More on virtual environments [here](http://docs.python-guide.org/en/latest/dev/virtualenvs/) and [here](https://realpython.com/python-virtual-environments-a-primer/)
+
+
+```{r engine = 'bash', eval = FALSE}
+pip install virtualenv
+cd my_project_folder
+virtualenv venv_my_project
+```
+
+
+  
+
+
