@@ -67,7 +67,7 @@ iframe{
 /* Clear floats after image containers */
 .row::after {
   content: "";
-  clear: both;
   display: table;
+  clear: both;
 }
 
