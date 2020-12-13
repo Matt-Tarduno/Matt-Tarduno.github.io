@@ -6,6 +6,12 @@ sitemap:
     changefreq: 'monthly'
     lastmod: 2017-05-08T12:49:30-05:00
 ---
+
+#container {
+    display: flex;
+    text-align: center;  /* optional */
+}
+
 <head>
 	<link rel="shortcut icon" type="image/png" href="assets/surfboard.png">
 </head>
@@ -17,8 +23,22 @@ sitemap:
 	<p></p>
 </div><!-- /.blurb -->
 
-<figure class="half" style="display:flex">
-    <img style="width:500px" src="assets/rideshare.png">
-    <img style="width:500px" src="assets/nevada.png">
-    <figcaption>Caption describing these two images.</figcaption>
-</figure>
+
+<div id="container">
+
+    <section>
+        <h1 class="left">the</h1>
+        <img class="left" src="assets/rideshare.png" alt="pic0" style="width:400px; height:228px;">
+        <p class="left"><a>word0</a></p>
+    </section>
+
+    <section>
+        <h1 class="right">title1 </h1>
+        <img class="right" src="assets/nevada.png" alt="pic1" style="width:400px; height:228px;">
+        <p class="right"><a>word0</a></p>
+    </section>
+
+</div>
+
+
+
