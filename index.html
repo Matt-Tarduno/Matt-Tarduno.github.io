@@ -7,10 +7,6 @@ sitemap:
     lastmod: 2017-05-08T12:49:30-05:00
 ---
 
-.container {
-    display: flex;
-    text-align: center;  /* optional */
-}
 
 <head>
 	<link rel="shortcut icon" type="image/png" href="assets/surfboard.png">
@@ -23,18 +19,28 @@ sitemap:
 	<p></p>
 </div><!-- /.blurb -->
 
-<div id="container">
 
-    <section>
-        <h1 class="left">The congestion costs of Uber and Lyft</h1>
-        <img class="left" src="assets/rideshare.png" alt="pic0" style="width:400px; height:228px;">
-    </section>
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
 
-    <section>
-        <h1 class="right">What drives support for inefficient corrective policies?</h1>
-        <img class="right" src="assets/nevada.png" alt="pic1" style="width:400px; height:228px;">
-    </section>
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
+<div class="row">
+  <div class="column">
+    <img src="assets/rideshare.png" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="assets/nevada.png" alt="Forest" style="width:100%">
+  </div>
 </div>
 
 
