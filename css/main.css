@@ -47,9 +47,9 @@ ul.posts {
     font-size: 1.2em;
 }
 
-ul.posts li {
-    list-style: none;
-}
+/*ul.posts li {
+/*    list-style: none;
+/*}
 
 iframe{
     overflow:hidden;
