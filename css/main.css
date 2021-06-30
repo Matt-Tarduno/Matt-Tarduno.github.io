@@ -74,12 +74,8 @@ iframe{
 
 /* Nav bar */
 
-.floatleft {
-    float:left;
+li {
+    display:inline;
 }
-.floatright {
-    float:right;
-}
-
 
 
