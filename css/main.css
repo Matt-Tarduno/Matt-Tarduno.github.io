@@ -91,12 +91,6 @@ iframe{
   color: blue;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #04AA6D;
-  color: black;
-}
-
 /* Right-aligned section inside the top navigation */
 .topnav-right {
   padding-top: 25px;
