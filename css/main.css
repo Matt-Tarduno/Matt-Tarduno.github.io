@@ -71,3 +71,15 @@ iframe{
   display: table;
 }
 
+
+/* Nav bar */
+
+.floatleft {
+    float:left;
+}
+.floatright {
+    float:right;
+}
+
+
+
