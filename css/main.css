@@ -76,6 +76,10 @@ iframe{
 
 /* Add a black background color to the top navigation */
 .topnav {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: 300;
     overflow: hidden;
 }
 
@@ -84,6 +88,10 @@ iframe{
   float: left;
     display: inline;
     margin-right: 20px;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: 300;
 }
 
 /* Change the color of links on hover */
