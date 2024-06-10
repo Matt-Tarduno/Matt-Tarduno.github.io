@@ -1,136 +1,161 @@
+---
+layout: default
+title: Research
+sitemap:
+    priority: 0.5
+    changefreq: 'monthly'
+    lastmod: 2017-05-09T12:49:30-05:00
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .blurb {
+            padding: 1em;
+        }
+        .blurb h1 {
+            font-size: 1.5em;
+        }
+        .blurb p {
+            font-size: 1em;
+            margin-left: 1em;
+            margin-right: 1em;
+            color: black;
+        }
+        .abstract {
+            display: none;
+            font-size: 0.9em;
+            margin-left: 2em;
+            margin-right: 1em;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        @media (max-width: 720px) {
+            .blurb p {
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+            }
+            .abstract {
+                margin-left: 1em;
+                margin-right: 0.5em;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        function toggleAbstract(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
 
 <br />
 
-
-
-
 <div class="blurb">
-	<p style="font-size:50px;  font-family:'Didot'; font-weight: 400; padding-left: 40px; padding-bottom: 10px; margin: 10px">Working Papers</p>
-	<br>
-	<br>
-	<br>
-	
-	<p style="font-size:25px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 500; padding: 20px" > <em>For Whom the Bridge Tolls: Congestion, Air Pollution, and Second-Best Road Pricing</em>
-	<p style="font-size:20px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 300; padding: 20px" > <em>Submitted</em> [<a href="https://matt-tarduno.github.io/jmp/" target="_blank">full paper</a>]
-	<style>
-	  .bottom-three {
-	     margin-bottom: 1cm;
-	  }
-	</style>
-	<br>
-	<br>
-	<br>
-		
+    <h1>Working Papers</h1>
 
-	
-	<p style="font-size:25px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 500; padding: 20px" > <em>Should Cities Tax Uber and Lyft?</em><span style="color: #5e5c5c"></span><be>
-	<p style="font-size:20px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 300; padding: 20px" ><em>R&R at Journal of Public Economics</em> [<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4624940" target="_blank">link</a>]	
-	<br>
-	<style>
-	  .bottom-three {
-	     margin-bottom: 1cm;
-	  }
-	</style>
-	<br>
-	<br>
-	<br>
+    <p>
+        <em>For Whom the Bridge Tolls: Congestion, Air Pollution, and Second-Best Road Pricing</em>
+    </p>
+    <p><em>Submitted. </em> [<a href="https://matt-tarduno.github.io/jmp/" target="_blank">link</a>]
+        [<a onclick="toggleAbstract('abstract1')">abstract</a>]
+    </p>
+    <p id="abstract1" class="abstract">
+        Real-world congestion zones are imperfect because they charge heterogeneous road users uniform prices, and invite externality spillovers in space and time. I show that given these imperfections, calculating optimal prices requires (i) individual-level externalities, (ii) individual elasticities, and (iii) cross-price elasticities between priced and unpriced trips. Using tolling microdata from California, I estimate a model of driving demand that yields these parameters. I then estimate optimal prices for proposed zones in three U.S. cities. I find that leakage pushes second-best prices below trip-level externalities, and that optimal peak pricing recovers just 30-40% of the welfare gains of a first-best policy.
+    </p>
+    <br><br>
 
+    <p>
+        <em>Should Cities Tax Uber and Lyft?</em>
+    </p>
+    <p><em>R&R at Journal of Public Economics. </em> [<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4624940" target="_blank">link</a>]
+        [<a onclick="toggleAbstract('abstract2')">abstract</a>]
+    </p>
+    <p id="abstract2" class="abstract">
+        This paper answers several first-order questions about ridesharing taxes: (i) How elastic is ridesharing with respect to taxation? (ii) How effective are ridesharing taxes at addressing traffic-related externalities? And (iii), who bears the burden of ridesharing taxes? Using data from Chicago, I show that ridesharing demand is inelastic in gross terms, and relative to supply. Accordingly, 85% of the city’s tax falls on passengers. Consistent with inelastic demand, I find little evidence of changes in congestion or air pollution in US cities that recently imposed ridesharing taxes. Finally, ridesharing taxes are roughly as progressive as the federal income tax schedule.
+    </p>
+    <br><br>
 
-	<p style="font-size:25px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 500; padding: 20px" > <em>Road Pricing with Green Vehicle Exemptions: Theory and Evidence</em><span style="color: #808080"> (with Peter Nilsson and Sebastian Tebbe)</span>
-	<p style="font-size:20px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 300; padding: 20px" ><em>Submitted</em> [<a href="https://drive.google.com/file/d/1ai9atP2FyqhoCfccPYxkjDL6zftxLzsN/view" target="_blank">link</a>]	
-	<br>
-	<style>
-	  .bottom-three {
-	     margin-bottom: 1cm;
-	  }
-	</style>
-	<br>
-	<br>
-	<br>
-		
-	<p style="font-size:25px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 500; padding: 20px" ><em>What drives support for inefficient environmental policies?</em> 
-	<p style="font-size:20px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 300; padding: 20px" ><em>Berkeley Law, Economics, and Politics Center Working Paper</em> [<a href="https://matt-tarduno.github.io/nevada/" target="_blank">link</a>]	
-	<h1></h1>
-	<br>
-	<br>
-	<style>
-	  .bottom-three {
-	     margin-bottom: 1cm;
-	  }
-	</style>
-	<br>
-	<br>
-	<br>
-	
-	<p style="font-size:50px;  font-family:'Didot'; font-weight: 400; padding-left: 40px; padding-bottom: 10px; margin: 10px">Work in Progress</p>
-	<br>
-	<br>
-	<br>
-	<p style="font-size:25px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 500; padding: 20px" > <em>Equity Neutral Policy</em><span style="color: #5e5c5c"> (with James Sallee)</span><br>
-	<br>
-	<br>
-	<style>
-	  .bottom-three {
-	     margin-bottom: 1cm;
-	  }
-	</style>
-	<br>
-	<br>
-	<br>
-		
-	<p style="font-size:25px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 500; padding: 20px" > <em>Misperceptions About Air Pollution:
-Implications for Willingness to Pay and Environmental Inequality</em><span style="color: #5e5c5c"> (with Reed Walker)</span><br>
-	<br>
-	<br>
-	<style>
-	  .bottom-three {
-	     margin-bottom: 1cm;
-	  }
-	</style>
-	<br>
-	<br>
-	<br>
+    <p>
+        <em>Road Pricing with Green Vehicle Exemptions: Theory and Evidence</em><span style="color: #808080"> (with Peter Nilsson and Sebastian Tebbe)</span>
+    </p>
+    <p><em>Submitted. </em> [<a href="https://drive.google.com/file/d/1ai9atP2FyqhoCfccPYxkjDL6zftxLzsN/view" target="_blank">link</a>]
+        [<a onclick="toggleAbstract('abstract_stockholm')">abstract</a>]
+    </p>
+    <p id="abstract_stockholm" class="abstract">
+        We provide a framework for setting congestion charges that reflect emission and congestion externalities and policy responses, such as vehicle ownership, driving, and residential sorting. Using Swedish administrative microdata, we identify these responses by exploiting a temporary exemption for alternative fuel vehicles and variation in individuals’ exposure to congestion charges. We find that commuters respond by adopting exempted alternative fuel vehicles, shifting trips away from fossil fuel toward alternative fuel vehicles, and changing where they live and work. We combine the estimated responses with the framework to recover an optimal congestion charge of €9.46 per crossing in Stockholm.
+    </p>
+    <br><br>
 
-
-
-
-<div class="blurb">
-	<p style="font-size:50px;  font-family:'Didot'; font-weight: 400; padding-left: 40px; padding-bottom: 10px; margin: 10px">Publications</p>
-	<br>
-	<br>
-	<br>	
-	<p style="font-size:25px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 500; padding: 20px" > Tarduno, Matthew, 2021. <em>The congestion costs of Uber and Lyft</em>.<br><span style="color: #5e5c5c"> Journal of Urban Economics, Elsevier, vol. 122.</span>
-	<p style="font-size:20px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 300; padding: 20px" >[<a href="https://doi.org/10.1016/j.jue.2020.103318" target="_blank">publication</a>][<a href="https://matt-tarduno.github.io/tnc/" target="_blank">ungated</a>]
-	<p style="font-size:20px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 300; padding: 20px" > Press: [<a href="https://www.axios.com/uber-lyft-austin-traffic-8d7034d4-fe16-4a8f-873d-3a867b35afb0.html" target="_blank">Axios</a>][<a href="https://usa.streetsblog.org/2021/02/25/talking-headways-podcast-less-congestion-after-ride-hailing-cessation/" target="_blank">Talking Headways Podcast</a>]
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-
-
+    <p>
+        <em>What drives support for inefficient environmental policies?</em>
+    </p>
+    <p><em>Berkeley Law, Economics, and Politics Center Working Paper. </em> [<a href="https://matt-tarduno.github.io/nevada/" target="_blank">link</a>]
+        [<a onclick="toggleAbstract('abstract4')">abstract</a>]
+    </p>
+    <p id="abstract4" class="abstract">
+        Negative externalities are often regulated with performance standards (e.g., fuel economy standards) where economic theory suggests that price-based mechanisms (e.g., fuel taxes) offer a more efficient alternative. The relative popularity of performance-based policies is puzzling: Given the cost-effectiveness of Pigouvian taxation and the ability of governments to pair these policies with redistribution, it should be possible to construct a price-based regulation that dominates a performance-based alternative on at least one of the three dimensions of efficacy, fairness, or cost, holding fixed the others. In this paper, I use an information provision experiment to understand what drives differences in voter support for these two policy types. Specifically, this experiment allows me to answer two questions: How do voters' perceptions of policy cost, effectiveness, and regressivity influence policy support? And do misperceptions of policy attributes explain the relative popularity of nontax corrective policies? Preliminary results from a pilot experiment conducted around a 2020 energy ballot initiative suggest that voters overestimate the effectiveness of performance-based policies at reducing carbon emissions. Oaxaca-blinder decompositions, however, suggest that differences in beliefs about policy attributes explain only a quarter of the difference in support for performance vs. price-based policies. As a result, neither rectifying misperceptions about policy attributes, nor redesigning price-based policies to compensate swing voters appear likely to significantly bolster support for price-based corrective policies.
+    </p>
+    <h1></h1>
+    <br><br>
 </div><!-- /.blurb -->
-<style>
-  .bottom-three {
-     margin-bottom: 1cm;
-  }
-</style>
 
-
-		
-		
-		
 <div class="blurb">
-	<p style="font-size:50px;  font-family:'Didot'; font-weight: 400; padding-left: 40px; padding-bottom: 10px; margin: 10px">Policy Reports</p>
-	<br>
-	<br>
-	<br>	
-	<p style="font-size:25px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 500; padding: 20px" ><em>Can targeted rebates foster equity in congestion pricing schemes? </em> <br><span style="color: #5e5c5c"> (with Jim Sallee)</span>
-	<p style="font-size:20px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 300; padding: 20px" >[<a href="https://escholarship.org/uc/item/7r64t085" target="_blank">Berkeley ITS Report</a>]
-	<br>
-	<br>		
-	
-		  
+    <h1>Publications</h1>
+    <p>
+        Tarduno, Matthew, 2021. <em>The congestion costs of Uber and Lyft</em>.<br><span style="color: #808080"> Journal of Urban Economics, Elsevier, vol. 122.</span>
+    </p>
+    <p>[<a href="https://doi.org/10.1016/j.jue.2020.103318" target="_blank">publication</a>][<a href="https://matt-tarduno.github.io/tnc/" target="_blank">ungated</a>]
+        [<a onclick="toggleAbstract('abstract5')">abstract</a>]
+    </p>
+    <p id="abstract5" class="abstract">
+        Abstract: I study the impact of transportation network companies (TNC) on traffic delays using a natural experiment created by the abrupt departure of Uber and Lyft from Austin, TX. Applying difference in differences and regression discontinuity specifications to high-frequency traffic data, I estimate that Uber and Lyft together decreased daytime traffic speeds in Austin by roughly 2.3%. Using Austin-specific measures of the value of travel time, I translate these slowdowns to estimates of citywide congestion costs that range from $33 to $52 million dollars annually. Back of the envelope calculations imply that these costs are similar in magnitude to the consumer surplus provided by TNCs in Austin. Together these results suggest that while TNCs may impose modest travel time externalities, restricting or taxing TNC activity is unlikely to generate large net welfare gains through reduced congestion.
+    </p>
+    <p> Press: [<a href="https://www.axios.com/uber-lyft-austin-traffic-8d7034d4-fe16-4a8f-873d-3a867b35afb0.html" target="_blank">Axios</a>][<a href="https://usa.streetsblog.org/2021/02/25/talking-headways-podcast-less-congestion-after-ride-hailing-cessation/" target="_blank">Talking Headways Podcast</a>]
+    </p>
+    <br><br><br><br><br>
 </div><!-- /.blurb -->
-<br />
 
+<div class="blurb">
+    <h1>Work in Progress</h1>
+
+    <p>
+        <em>Equity Neutral Policy</em><span style="color: #808080"> (with James Sallee)</span>
+    </p>
+    <br><br>
+
+    <p>
+        <em>Misperceptions About Air Pollution: Implications for Willingness to Pay and Environmental Inequality</em><span style="color: #808080"> (with Reed Walker)</span>
+    </p>
+    <br><br>
+</div><!-- /.blurb -->
+
+<div class="blurb">
+    <h1>Policy Reports</h1>
+    <p>
+        <em>Can targeted rebates foster equity in congestion pricing schemes?</em><br><span style="color: #808080"> (with Jim Sallee)</span>
+    </p>
+    <p>[<a href="https://escholarship.org/uc/item/7r64t085" target="_blank">Berkeley ITS Report</a>]
+    </p>
+    <br><br>
+</div><!-- /.blurb -->
+
+</body>
+</html>
