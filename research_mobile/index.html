@@ -15,25 +15,27 @@ sitemap:
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0.4em;
+            margin: 0;
             padding: 0;
             line-height: 1.6;
         }
         .blurb {
-            padding: 0.3em;
+            padding: 1em;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         .blurb h1 {
             font-size: 1.5em;
         }
         .blurb p {
             font-size: 1em;
-            margin: 0.3em 0em;
+            margin: 0.5em 0;
             color: black;
         }
         .abstract {
             display: none;
             font-size: 0.9em;
-            margin: 0.2em 0em;
+            margin: 0.5em 0;
         }
         a {
             color: blue;
@@ -41,8 +43,11 @@ sitemap:
             cursor: pointer;
         }
         @media (max-width: 720px) {
+            .blurb {
+                padding: 0.5em;
+            }
             .blurb p, .abstract {
-                margin: 0.2em 0em;
+                margin: 0.25em 0;
             }
         }
     </style>
