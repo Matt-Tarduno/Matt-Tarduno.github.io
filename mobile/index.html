@@ -19,18 +19,22 @@ sitemap:
         }
 
         /* Responsive layout using Flexbox */
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center; /* Center the content */
+        .container {
+            max-width: 1200px; /* Set a wider max width for large screens */
+            margin: 0 auto;
             padding: 20px;
         }
 
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Spread columns across the space */
+        }
+
         .column {
-            flex: 1;
+            flex-basis: 48%; /* Take up about half the container's width on larger screens */
             padding: 10px;
-            text-align: center; /* Center text in mobile */
-            max-width: 600px; /* Limit width for larger screens */
+            text-align: left; /* Align text to the left */
         }
 
         img {
@@ -45,27 +49,21 @@ sitemap:
             line-height: 1.6;
         }
 
-        /* Bottom spacing */
-        .bottom-three {
-            margin-bottom: 1cm;
-        }
-
         /* Mobile view (screen width 720px and below) */
         @media screen and (max-width: 720px) {
             .row {
                 flex-direction: column;
-                padding: 10px;
             }
 
             .column {
-                text-align: center;
-                padding: 0;
+                flex-basis: 100%; /* Take up full width in mobile */
+                text-align: center; /* Center the text in mobile */
             }
 
             img {
                 width: 80%;
                 margin: 0 auto;
-                max-width: 300px; /* Ensure image doesn't stretch too much */
+                max-width: 300px;
             }
 
             p {
@@ -77,16 +75,18 @@ sitemap:
 </head>
 
 <body>
-    <div class="row">
-        <div class="column">
-            <!-- Ensure the correct path to the image -->
-            <img src="https://matt-tarduno.github.io/assets/headshot.jpg" alt="Matt Tarduno headshot">
-        </div>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <!-- Ensure the correct path to the image -->
+                <img src="https://matt-tarduno.github.io/assets/headshot.jpg" alt="Matt Tarduno headshot">
+            </div>
 
-        <div class="column">
-            <p>I am an assistant professor of economics at the <a href="https://environment.harvard.edu/" target="_blank"><strong>University of Illinois at Chicago</strong></a>.</p>
-            <p>Prior to joining UIC, I was a postdoctoral fellow at the <a href="https://econ.uic.edu/" target="_blank"><strong>Harvard University Center for the Environment</strong></a>. I received my PhD in 2022 from <a href="https://are.berkeley.edu/" target="_blank"><strong>Berkeley ARE</strong></a>, where I was also a graduate student researcher at the <a href="https://ei.haas.berkeley.edu/" target="_blank"><strong>Energy Institute at Haas</strong></a>.</p>
-            <p>My fields are <strong>environmental economics</strong> and <strong>public economics</strong>; I study externalities and the policies aimed at addressing them.</p>
+            <div class="column">
+                <p>I am an assistant professor of economics at the <a href="https://environment.harvard.edu/" target="_blank"><strong>University of Illinois at Chicago</strong></a>.</p>
+                <p>Prior to joining UIC, I was a postdoctoral fellow at the <a href="https://econ.uic.edu/" target="_blank"><strong>Harvard University Center for the Environment</strong></a>. I received my PhD in 2022 from <a href="https://are.berkeley.edu/" target="_blank"><strong>Berkeley ARE</strong></a>, where I was also a graduate student researcher at the <a href="https://ei.haas.berkeley.edu/" target="_blank"><strong>Energy Institute at Haas</strong></a>.</p>
+                <p>My fields are <strong>environmental economics</strong> and <strong>public economics</strong>; I study externalities and the policies aimed at addressing them.</p>
+            </div>
         </div>
     </div>
 </body>
