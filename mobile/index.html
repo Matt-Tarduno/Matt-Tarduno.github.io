@@ -18,57 +18,33 @@ sitemap:
             padding: 0;
         }
 
-        /* Responsive layout using Flexbox */
         .container {
-            max-width: 1400px; /* Wider container for large screens */
+            max-width: 100%; /* Take up full screen width on mobile */
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px; /* Small padding for breathing room */
         }
 
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between; /* Spread columns across space */
-        }
-
-        .column {
-            flex-basis: 60%; /* Wider columns (60% of container) */
-            padding: 20px;
-            text-align: left; /* Ensure text is left-aligned */
+        .content {
+            padding: 10px;
+            text-align: left; /* Left-align the text */
         }
 
         img {
-            max-width: 100%;
+            max-width: 100%; /* Ensure the image takes full width */
             height: auto;
             display: block;
             margin: 0 auto; /* Center the image */
         }
 
         p {
-            font-size: 20px; /* Larger font size */
-            line-height: 1.8; /* More spacing between lines */
+            font-size: 20px; /* Large text */
+            line-height: 1.8; /* Comfortable line spacing */
         }
 
-        /* Mobile view (screen width 720px and below) */
-        @media screen and (max-width: 720px) {
-            .row {
-                flex-direction: column;
-            }
-
-            .column {
-                flex-basis: 100%; /* Full width on mobile */
-                text-align: left; /* Still keep text left-aligned */
-            }
-
-            img {
-                width: 80%;
-                margin: 0 auto;
-                max-width: 300px;
-            }
-
+        /* Adjust text size for very small screens */
+        @media screen and (max-width: 480px) {
             p {
-                font-size: 18px; /* Slightly smaller font on mobile */
-                line-height: 1.6;
+                font-size: 18px; /* Slightly smaller on very small screens */
             }
         }
     </style>
@@ -76,17 +52,12 @@ sitemap:
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="column">
-                <!-- Ensure the correct path to the image -->
-                <img src="https://matt-tarduno.github.io/assets/headshot.jpg" alt="Matt Tarduno headshot">
-            </div>
-
-            <div class="column">
-                <p>I am an assistant professor of economics at the <a href="https://environment.harvard.edu/" target="_blank"><strong>University of Illinois at Chicago</strong></a>.</p>
-                <p>Prior to joining UIC, I was a postdoctoral fellow at the <a href="https://econ.uic.edu/" target="_blank"><strong>Harvard University Center for the Environment</strong></a>. I received my PhD in 2022 from <a href="https://are.berkeley.edu/" target="_blank"><strong>Berkeley ARE</strong></a>, where I was also a graduate student researcher at the <a href="https://ei.haas.berkeley.edu/" target="_blank"><strong>Energy Institute at Haas</strong></a>.</p>
-                <p>My fields are <strong>environmental economics</strong> and <strong>public economics</strong>; I study externalities and the policies aimed at addressing them.</p>
-            </div>
+        <div class="content">
+            <!-- Ensure the correct path to the image -->
+            <img src="https://matt-tarduno.github.io/assets/headshot.jpg" alt="Matt Tarduno headshot">
+            <p>I am an assistant professor of economics at the <a href="https://environment.harvard.edu/" target="_blank"><strong>University of Illinois at Chicago</strong></a>.</p>
+            <p>Prior to joining UIC, I was a postdoctoral fellow at the <a href="https://econ.uic.edu/" target="_blank"><strong>Harvard University Center for the Environment</strong></a>. I received my PhD in 2022 from <a href="https://are.berkeley.edu/" target="_blank"><strong>Berkeley ARE</strong></a>, where I was also a graduate student researcher at the <a href="https://ei.haas.berkeley.edu/" target="_blank"><strong>Energy Institute at Haas</strong></a>.</p>
+            <p>My fields are <strong>environmental economics</strong> and <strong>public economics</strong>; I study externalities and the policies aimed at addressing them.</p>
         </div>
     </div>
 </body>
