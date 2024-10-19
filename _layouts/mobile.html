@@ -17,12 +17,12 @@
 
       .topnav {
         background-color: #f8f9fa;
-        padding: 15px 30px; /* Adjusted padding for a wider navigation bar */
+        padding: 15px 30px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
 
       .topnav a {
-        font-size: 20px; /* Smaller header text */
+        font-size: 20px;
         font-family: 'Noto Sans', sans-serif;
         font-weight: 400;
         color: black;
@@ -45,15 +45,17 @@
         border-top: 1px solid #e0e0e0;
       }
 
-      .container {
-        max-width: 1200px; /* Increased container width */
-        margin: 0 auto;
-        padding: 30px; /* Increased padding for more comfortable space */
+      /* Main content area */
+      .main-content {
+        width: 100%; /* Use the full width of the screen */
+        padding: 30px; /* Add padding for spacing around content */
+        max-width: 1200px; /* Restrict width to 1200px for large screens */
+        margin: 0 auto; /* Center the content */
       }
 
       footer {
         background-color: #f8f9fa;
-        padding: 30px; /* Padding around footer */
+        padding: 30px;
         text-align: center;
         margin-top: 40px;
       }
@@ -82,20 +84,20 @@
       /* Responsive design */
       @media screen and (max-width: 768px) {
         .topnav {
-          padding: 15px 25px; /* Padding adjustment for tablets */
+          padding: 15px 25px;
         }
 
         .topnav a {
-          font-size: 18px; /* Smaller font for the header */
+          font-size: 18px;
         }
 
         .topnav-right a {
           font-size: 16px;
         }
 
-        .container {
-          padding: 20px; /* Adjust padding for mobile */
-          max-width: 95%; /* Take up more width on mobile */
+        .main-content {
+          padding: 20px;
+          max-width: 90%; /* Take up more width on mobile */
         }
 
         footer {
@@ -115,18 +117,18 @@
       /* Very small screens */
       @media screen and (max-width: 480px) {
         .topnav {
-          padding: 12px 20px; /* Smaller padding on very small screens */
+          padding: 12px 20px;
         }
 
         .topnav a {
-          font-size: 16px; /* Even smaller font for the header */
+          font-size: 16px;
         }
 
         .topnav-right a {
           font-size: 14px;
         }
 
-        .container {
+        .main-content {
           padding: 15px;
           max-width: 90%; /* Even wider on very small screens */
         }
@@ -158,9 +160,9 @@
 
     <hr>
 
-    <div class="container">
+    <div class="main-content">
       {{ content }}
-    </div><!-- /.container -->
+    </div><!-- /.main-content -->
 
     <footer>
       <ul>
