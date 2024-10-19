@@ -6,13 +6,9 @@ sitemap:
     changefreq: 'monthly'
     lastmod: 2017-05-08T12:49:30-05:00
 ---
-<script type="text/javascript">
-    if (screen.width <= 720) {
-        window.location = "https://matt-tarduno.github.io/mobile";
-    }
-</script>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="mt.png">
     <style>
         /* Basic page styling */
@@ -22,16 +18,19 @@ sitemap:
             padding: 0;
         }
 
+        /* Responsive layout using Flexbox */
         .row {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center; /* Center the content */
             padding: 20px;
         }
 
         .column {
             flex: 1;
             padding: 10px;
+            text-align: center; /* Center text in mobile */
+            max-width: 600px; /* Limit width for larger screens */
         }
 
         img {
@@ -59,13 +58,14 @@ sitemap:
             }
 
             .column {
-                padding: 0;
                 text-align: center;
+                padding: 0;
             }
 
             img {
-                width: 75%; /* Adjust the image size for mobile */
-                max-width: 300px; /* Ensure it doesn't get too large */
+                width: 80%;
+                margin: 0 auto;
+                max-width: 300px; /* Ensure image doesn't stretch too much */
             }
 
             p {
@@ -76,28 +76,17 @@ sitemap:
     </style>
 </head>
 
-<div class="row">
-    <div class="column">
-        <img src="https://matt-tarduno.github.io/assets/headshot.jpeg" alt="headshot">
+<body>
+    <div class="row">
+        <div class="column">
+            <!-- Ensure the correct path to the image -->
+            <img src="https://matt-tarduno.github.io/assets/headshot.jpg" alt="Matt Tarduno headshot">
+        </div>
+
+        <div class="column">
+            <p>I am an assistant professor of economics at the <a href="https://environment.harvard.edu/" target="_blank"><strong>University of Illinois at Chicago</strong></a>.</p>
+            <p>Prior to joining UIC, I was a postdoctoral fellow at the <a href="https://econ.uic.edu/" target="_blank"><strong>Harvard University Center for the Environment</strong></a>. I received my PhD in 2022 from <a href="https://are.berkeley.edu/" target="_blank"><strong>Berkeley ARE</strong></a>, where I was also a graduate student researcher at the <a href="https://ei.haas.berkeley.edu/" target="_blank"><strong>Energy Institute at Haas</strong></a>.</p>
+            <p>My fields are <strong>environmental economics</strong> and <strong>public economics</strong>; I study externalities and the policies aimed at addressing them.</p>
+        </div>
     </div>
-    
-    <div class="column">
-        <p>I am an assistant professor of economics at the <a href="https://environment.harvard.edu/" target="_blank"><strong>University of Illinois at Chicago</strong></a>.</p>
-        <p>Prior to joining UIC, I was a postdoctoral fellow at the <a href="https://econ.uic.edu/" target="_blank"><strong>Harvard University Center for the Environment</strong></a>. I received my PhD in 2022 from <a href="https://are.berkeley.edu/" target="_blank"><strong>Berkeley ARE</strong></a>, where I was also a graduate student researcher at the <a href="https://ei.haas.berkeley.edu/" target="_blank"><strong>Energy Institute at Haas</strong></a>.</p>
-        <p>My fields are <strong>environmental economics</strong> and <strong>public economics</strong>; I study externalities and the policies aimed at addressing them.</p>
-    </div>
-</div>
-
-
-
-
-
-</div><!-- /.blurb -->
-<div class="blurb">
-<p style="font-size:25px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 300; padding: 40px"><a href="/research">[research]</a></p>
-</div><!-- /.blurb -->
-<div class="blurb">
-<p style="font-size:25px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 300; padding: 40px"><a href="mailto:tarduno@uic.edu">[email]</a></p>
-</div><!-- /.blurb -->
-<div class="blurb">
-<p style="font-size:25px; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: 300; padding: 40px"><a href="https://twitter.com/matttarduno">[twitter]</a></p>
+</body>
