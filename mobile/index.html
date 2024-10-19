@@ -18,15 +18,11 @@ sitemap:
             padding: 0;
         }
 
-        .container {
-            max-width: 100%; /* Full width */
-            margin: 0 auto;
-            padding-left: 20px;  /* Small padding on the left */
-            padding-right: 2px;  /* Reduced padding on the right */
-        }
-
         .content {
-            text-align: left; /* Ensure text is left-aligned */
+            padding-left: 10px;  /* Small padding on the left */
+            padding-right: 5px;  /* Reduced padding on the right */
+            width: 100%; /* Take up full width */
+            text-align: left; /* Left-align the text */
         }
 
         img {
@@ -42,7 +38,7 @@ sitemap:
         }
 
         /* Adjust text size for very small screens */
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 480px) {
             p {
                 font-size: 18px; /* Slightly smaller on very small screens */
             }
@@ -51,13 +47,11 @@ sitemap:
 </head>
 
 <body>
-    <div class="container">
-        <div class="content">
-            <!-- Ensure the correct path to the image -->
-            <img src="https://matt-tarduno.github.io/assets/headshot.jpg" alt="Matt Tarduno headshot">
-            <p>I am an assistant professor of economics at the <a href="https://environment.harvard.edu/" target="_blank"><strong>University of Illinois at Chicago</strong></a>.</p>
-            <p>Prior to joining UIC, I was a postdoctoral fellow at the <a href="https://econ.uic.edu/" target="_blank"><strong>Harvard University Center for the Environment</strong></a>. I received my PhD in 2022 from <a href="https://are.berkeley.edu/" target="_blank"><strong>Berkeley ARE</strong></a>, where I was also a graduate student researcher at the <a href="https://ei.haas.berkeley.edu/" target="_blank"><strong>Energy Institute at Haas</strong></a>.</p>
-            <p>My fields are <strong>environmental economics</strong> and <strong>public economics</strong>; I study externalities and the policies aimed at addressing them.</p>
-        </div>
+    <div class="content">
+        <!-- Ensure the correct path to the image -->
+        <img src="https://matt-tarduno.github.io/assets/headshot.jpg" alt="Matt Tarduno headshot">
+        <p>I am an assistant professor of economics at the <a href="https://environment.harvard.edu/" target="_blank"><strong>University of Illinois at Chicago</strong></a>.</p>
+        <p>Prior to joining UIC, I was a postdoctoral fellow at the <a href="https://econ.uic.edu/" target="_blank"><strong>Harvard University Center for the Environment</strong></a>. I received my PhD in 2022 from <a href="https://are.berkeley.edu/" target="_blank"><strong>Berkeley ARE</strong></a>, where I was also a graduate student researcher at the <a href="https://ei.haas.berkeley.edu/" target="_blank"><strong>Energy Institute at Haas</strong></a>.</p>
+        <p>My fields are <strong>environmental economics</strong> and <strong>public economics</strong>; I study externalities and the policies aimed at addressing them.</p>
     </div>
 </body>
