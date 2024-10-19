@@ -13,19 +13,16 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        overflow-x: hidden; /* Prevent horizontal scroll on small devices */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
       }
 
       .topnav {
         background-color: #f8f9fa;
-        padding: 15px 30px; /* Default padding on all sides */
-        padding-left: 50px; /* More padding on the left */
+        padding: 15px 30px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
-        margin: 0;
       }
 
       .topnav a {
@@ -34,18 +31,16 @@
         font-weight: 400;
         color: black;
         text-decoration: none;
-        margin-right: 20px;
       }
 
       .topnav-right {
         display: flex;
-        justify-content: space-between;
-        width: auto;
       }
 
       .topnav-right a {
         font-size: 18px;
-        margin-left: 15px;
+        margin-left: 20px;
+        color: black;
       }
 
       hr {
@@ -54,16 +49,16 @@
         border-top: 1px solid #e0e0e0;
       }
 
-      /* Main content area */
       .main-content {
+        padding: 0 20px;
         width: 100%;
-        padding: 0 20px; /* Full width and a little padding */
-        margin: 0;
+        max-width: 1200px; /* Ensures content doesn't stretch too far on larger screens */
+        margin: 0 auto;
       }
 
       footer {
         background-color: #f8f9fa;
-        padding: 5px;
+        padding: 10px;
         text-align: center;
         margin-top: 40px;
       }
@@ -93,7 +88,6 @@
       @media screen and (max-width: 768px) {
         .topnav {
           padding: 15px 20px;
-          padding-left: 30px;
         }
 
         .topnav a {
@@ -105,8 +99,7 @@
         }
 
         .main-content {
-          padding: 0 10px; /* Reduced padding for mobile */
-          width: 100%;
+          padding: 0 10px;
         }
 
         footer {
@@ -123,11 +116,9 @@
         }
       }
 
-      /* Very small screens (max-width 480px) */
       @media screen and (max-width: 480px) {
         .topnav {
           padding: 12px 15px;
-          padding-left: 20px;
         }
 
         .topnav a {
@@ -136,7 +127,6 @@
 
         .main-content {
           padding: 5px;
-          width: 100%;
         }
 
         footer {
@@ -178,4 +168,3 @@
     </footer>
   </body>
 </html>
-
