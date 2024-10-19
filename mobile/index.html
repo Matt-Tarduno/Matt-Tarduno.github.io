@@ -1,62 +1,175 @@
----
-layout: mobile
-title: Matt Tarduno
-sitemap:
-    priority: 1.0
-    changefreq: 'monthly'
-    lastmod: 2017-05-08T12:49:30-05:00
----
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="mt.png">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="favicon_m.png">
+    {% seo %}
     <style>
-        /* Basic page styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+      /* General layout and padding styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden; /* Prevent horizontal scroll on small devices */
+      }
+
+      .topnav {
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        padding-left: 50px; /* Add more padding on the left */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Ensure full width */
+        max-width: 100%;
+        margin: 0;
+      }
+
+      .topnav a {
+        font-size: 20px;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 400;
+        color: black;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+
+      .topnav-right a {
+        font-size: 18px;
+        margin-left: 15px;
+      }
+
+      hr {
+        margin: 20px 0;
+        border: 0;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      /* Main content area */
+      .main-content {
+        width: 100%; /* Ensure the content takes up the full width */
+        padding: 15px 10px; /* Reduce padding to maximize the use of space */
+        margin: 0;
+      }
+
+      footer {
+        background-color: #f8f9fa;
+        padding: 5px;
+        text-align: center;
+        margin-top: 40px;
+        width: 100%;
+      }
+
+      footer ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      footer ul li {
+        display: inline-block;
+        margin: 0 5px;
+      }
+
+      footer ul li a {
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+      }
+
+      footer ul li a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive design */
+      @media screen and (max-width: 768px) {
+        .topnav {
+          padding: 15px 25px;
+          padding-left: 35px;
+          flex-direction: column; /* Stack the navigation vertically on smaller screens */
         }
 
-        /* Adjust the default header (applied by the layout) */
-        h1 {
-            margin-left: 20px;  /* Shift the header to the right by 20px */
+        .topnav a {
+          font-size: 18px;
+          margin-bottom: 10px; /* Space out nav items on smaller screens */
         }
 
-        .content {
-            padding-left: 10px;  /* Small padding on the left */
-            padding-right: 5px;  /* Reduced padding on the right */
-            width: 100%; /* Take up full width */
-            text-align: left; /* Left-align the text */
+        .main-content {
+          padding: 15px 5px;
+          width: 100%; /* Ensure full width */
+          max-width: 100%;
         }
 
-        img {
-            max-width: 100%; /* Ensure the image takes full width */
-            height: auto;
-            display: block;
-            margin: 0 auto; /* Center the image */
+        footer {
+          padding: 10px;
         }
 
-        p {
-            font-size: 20px; /* Large text */
-            line-height: 1.8; /* Comfortable line spacing */
+        footer ul li {
+          display: block;
+          margin: 10px 0;
         }
 
-        /* Adjust text size for very small screens */
-        @media screen and (max-width: 480px) {
-            p {
-                font-size: 18px; /* Slightly smaller on very small screens */
-            }
+        footer ul li a {
+          font-size: 16px;
         }
+      }
+
+      /* Very small screens */
+      @media screen and (max-width: 480px) {
+        .topnav {
+          padding: 12px 20px;
+          padding-left: 25px;
+        }
+
+        .topnav a {
+          font-size: 16px;
+        }
+
+        .main-content {
+          padding: 5px;
+          width: 100%; /* Ensure full width on very small screens */
+        }
+
+        footer {
+          padding: 10px;
+        }
+
+        footer ul li {
+          margin: 5px 0;
+        }
+
+        footer ul li a {
+          font-size: 14px;
+        }
+      }
     </style>
-</head>
-
-<body>
-    <div class="content">
-        <!-- Ensure the correct path to the image -->
-        <img src="https://matt-tarduno.github.io/assets/headshot.jpg" alt="Matt Tarduno headshot">
-        <p>I am an assistant professor of economics at the <a href="https://environment.harvard.edu/" target="_blank"><strong>University of Illinois at Chicago</strong></a>.</p>
-        <p>Prior to joining UIC, I was a postdoctoral fellow at the <a href="https://econ.uic.edu/" target="_blank"><strong>Harvard University Center for the Environment</strong></a>. I received my PhD in 2022 from <a href="https://are.berkeley.edu/" target="_blank"><strong>Berkeley ARE</strong></a>, where I was also a graduate student researcher at the <a href="https://ei.haas.berkeley.edu/" target="_blank"><strong>Energy Institute at Haas</strong></a>.</p>
-        <p>My fields are <strong>environmental economics</strong> and <strong>public economics</strong>; I study externalities and the policies aimed at addressing them.</p>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/" style="font-size:24px;">Matthew Tarduno</a> <!-- Reduced header font size -->
+      <div class="topnav-right">
+        <a href="/" style="color: black">Home</a>
+        <a href="/cv" style="color: black">CV</a>
+        <a href="/research" style="color: black">Research</a>
+      </div>
     </div>
-</body>
+
+    <hr>
+
+    <div class="main-content">
+      {{ content }}
+    </div><!-- /.main-content -->
+
+    <footer>
+      <ul>
+        <li><a href="mailto:tarduno@uic.edu">email</a></li>
+        <li><a href="https://github.com/Matt-Tarduno" target="_blank">github</a></li>
+        <li><a href="https://twitter.com/matttarduno" target="_blank">twitter</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
