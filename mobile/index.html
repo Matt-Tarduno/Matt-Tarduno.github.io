@@ -20,7 +20,7 @@ sitemap:
 
         /* Responsive layout using Flexbox */
         .container {
-            max-width: 1200px; /* Set a wider max width for large screens */
+            max-width: 1400px; /* Wider container for large screens */
             margin: 0 auto;
             padding: 20px;
         }
@@ -28,13 +28,13 @@ sitemap:
         .row {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between; /* Spread columns across the space */
+            justify-content: space-between; /* Spread columns across space */
         }
 
         .column {
-            flex-basis: 48%; /* Take up about half the container's width on larger screens */
-            padding: 10px;
-            text-align: left; /* Align text to the left */
+            flex-basis: 60%; /* Wider columns (60% of container) */
+            padding: 20px;
+            text-align: left; /* Ensure text is left-aligned */
         }
 
         img {
@@ -45,8 +45,8 @@ sitemap:
         }
 
         p {
-            font-size: 18px;
-            line-height: 1.6;
+            font-size: 20px; /* Larger font size */
+            line-height: 1.8; /* More spacing between lines */
         }
 
         /* Mobile view (screen width 720px and below) */
@@ -56,8 +56,8 @@ sitemap:
             }
 
             .column {
-                flex-basis: 100%; /* Take up full width in mobile */
-                text-align: center; /* Center the text in mobile */
+                flex-basis: 100%; /* Full width on mobile */
+                text-align: left; /* Still keep text left-aligned */
             }
 
             img {
@@ -67,8 +67,8 @@ sitemap:
             }
 
             p {
-                font-size: 16px;
-                line-height: 1.5;
+                font-size: 18px; /* Slightly smaller font on mobile */
+                line-height: 1.6;
             }
         }
     </style>
