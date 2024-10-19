@@ -13,11 +13,15 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        overflow-x: hidden; /* Prevent horizontal scroll on small devices */
       }
 
       .topnav {
         background-color: #f8f9fa;
-        padding: 15px 30px; /* Default padding on all sides */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
         padding-left: 50px; /* Add more padding on the left */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
@@ -29,10 +33,6 @@
         color: black;
         text-decoration: none;
         margin-right: 20px;
-      }
-
-      .topnav-right {
-        float: right;
       }
 
       .topnav-right a {
@@ -48,10 +48,9 @@
 
       /* Main content area */
       .main-content {
-        width: 100%; /* Use the full width of the screen */
-        padding: 15px 10px; /* Reduced padding to use more of the screen width */
-        max-width: 100%; /* Remove the restriction for smaller screens */
-        margin: 0 auto;
+        width: 100%; /* Ensure the content takes up the full width */
+        padding: 15px 10px; /* Reduce padding to maximize the use of space */
+        margin: 0; /* Remove margin to ensure it takes up the full width */
       }
 
       footer {
@@ -86,20 +85,17 @@
       @media screen and (max-width: 768px) {
         .topnav {
           padding: 15px 25px;
-          padding-left: 35px; /* Adjust left padding on mobile */
+          padding-left: 35px;
+          flex-direction: column; /* Stack the navigation vertically on smaller screens */
         }
 
         .topnav a {
           font-size: 18px;
-        }
-
-        .topnav-right a {
-          font-size: 16px;
+          margin-bottom: 10px; /* Space out nav items on smaller screens */
         }
 
         .main-content {
-          padding: 15px 5px; /* Reduced padding further for mobile */
-          max-width: 100%;
+          padding: 15px 5px;
         }
 
         footer {
@@ -120,20 +116,15 @@
       @media screen and (max-width: 480px) {
         .topnav {
           padding: 12px 20px;
-          padding-left: 25px; /* Further reduce left padding for very small screens */
+          padding-left: 25px;
         }
 
         .topnav a {
           font-size: 16px;
         }
 
-        .topnav-right a {
-          font-size: 14px;
-        }
-
         .main-content {
           padding: 5px;
-          max-width: 100%; /* Ensure full width on very small screens */
         }
 
         footer {
