@@ -1,110 +1,224 @@
----
-layout: default
-title: Matt Tarduno
-sitemap:
-    priority: 1.0
-    changefreq: 'monthly'
-    lastmod: 2017-05-08T12:49:30-05:00
----
-
-<head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matt Tarduno</title>
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="favicon_m.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="mt.png">
     <style>
-        /* General styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 5px;
-            padding: 5px;
-            width: 95%; /* Ensure body takes up full width  */
+      /* General layout and padding styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden; /* Prevent horizontal scroll on small devices */
+      }
+
+      .topnav {
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center horizontally */
+        padding: 15px 30px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .topnav .name {
+        font-size: 24px;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 400;
+        color: black;
+        text-decoration: none;
+        margin-bottom: 10px; /* Space between name and nav links */
+      }
+      .topnav .nav-links {
+        display: flex;
+        gap: 20px; /* Space between navigation links */
+      }
+      .topnav .nav-links a {
+        font-size: 18px;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 400;
+        color: black;
+        text-decoration: none;
+      }
+      hr {
+        margin: 20px 0;
+        border: 0;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      /* Main content area */
+      .main-content {
+        width: 100%; /* Ensure the content takes up the full width */
+        padding: 15px 10px; /* Reduce padding to maximize the use of space */
+        margin: 0; /* Remove margin to ensure it takes up the full width */
+      }
+
+      /* Content specific styles */
+      .content {
+        padding: 10px 15px; /* Padding around the content */
+        text-align: left;
+        width: 100%; /* Ensure the content takes up full width */
+        box-sizing: border-box; /* Include padding in width calculation */
+      }
+      
+      /* Adjust image within content */
+      img {
+        max-width: 100%; /* Image takes full width */
+        height: auto;
+        display: block;
+        margin: 0 auto 20px auto; /* Center the image with bottom margin */
+      }
+      
+      /* Paragraph text styling */
+      p {
+        font-size: 20px; /* Larger font size */
+        line-height: 1.8; /* Comfortable line spacing */
+      }
+
+      footer {
+        background-color: #f8f9fa;
+        padding: 5px;
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      footer ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      footer ul li {
+        display: inline-block;
+        margin: 0 5px;
+      }
+
+      footer ul li a {
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+      }
+
+      footer ul li a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive design */
+      @media screen and (max-width: 768px) {
+        .topnav {
+          padding: 15px 25px;
+        }
+        .topnav .name {
+          font-size: 20px;
+          margin-bottom: 8px;
+        }
+        .topnav .nav-links {
+          flex-direction: column; /* Stack nav links vertically on smaller screens */
+          gap: 8px;
+        }
+        .topnav .nav-links a {
+          font-size: 16px;
         }
 
-        /* Header styling */
-        header {
-            padding: 10px 20px; /* Add padding around the header */
-            background-color: #f8f9fa; /* Light background for the header */
-            text-align: center;
+        .main-content {
+          padding: 15px 5px;
         }
-
-        /* Footer styling */
-        footer {
-            padding: 10px 20px; /* Padding around the footer */
-            background-color: #f8f9fa; /* Light background for the footer */
-            text-align: center;
-        }
-
-        /* Responsive content */
+        
         .content {
-            padding: 10px 15px; /* Padding around the content */
-            text-align: left;
-            width: 100%; /* Ensure the content takes up full width */
-            box-sizing: border-box; /* Include padding in width calculation */
+          padding: 5px 10px; /* Reduce padding for smaller screens */
+          font-size: 18px; /* Slightly smaller font size for mobile */
+          width: 100%; /* Ensure the content takes up full width */
         }
-
-        /* Adjust image within content */
-        img {
-            max-width: 100%; /* Image takes full width */
-            height: auto;
-            display: block;
-            margin: 0 auto; /* Center the image */
-        }
-
-        /* Paragraph text styling */
+        
         p {
-            font-size: 20px; /* Larger font size */
-            line-height: 1.8; /* Comfortable line spacing */
+          font-size: 18px; /* Slightly smaller text on mobile */
         }
 
-        /* Mobile-specific styles */
-        @media screen and (max-width: 768px) {
-            header {
-                padding: 10px 15px; /* Slightly less padding for smaller screens */
-            }
-
-            footer {
-                padding: 10px 15px; /* Slightly less padding for smaller screens */
-            }
-
-            .content {
-                padding: 5px 10px; /* Reduce padding for smaller screens */
-                font-size: 18px; /* Slightly smaller font size for mobile */
-                width: 100%; /* Ensure the content takes up full width */
-            }
-
-            p {
-                font-size: 18px; /* Slightly smaller text on mobile */
-            }
+        footer {
+          padding: 10px;
         }
 
-        /* Styles for very small screens */
-        @media screen and (max-width: 480px) {
-            p {
-                font-size: 16px; /* Even smaller text on very small screens */
-            }
-
-            header {
-                padding: 8px 10px; /* Smaller padding on very small screens */
-            }
-
-            footer {
-                padding: 8px 10px; /* Smaller padding on very small screens */
-            }
-
-            .content {
-                padding: 5px; /* Reduce padding on very small screens */
-            }
+        footer ul li {
+          display: block;
+          margin: 10px 0;
         }
+
+        footer ul li a {
+          font-size: 16px;
+        }
+      }
+
+      /* Very small screens */
+      @media screen and (max-width: 480px) {
+        .topnav {
+          padding: 12px 20px;
+        }
+        .topnav .name {
+          font-size: 18px;
+        }
+        .topnav .nav-links a {
+          font-size: 14px;
+        }
+
+        .main-content {
+          padding: 5px;
+        }
+        
+        .content {
+          padding: 5px; /* Reduce padding on very small screens */
+        }
+        
+        p {
+          font-size: 16px; /* Even smaller text on very small screens */
+        }
+
+        footer {
+          padding: 10px;
+        }
+
+        footer ul li {
+          margin: 5px 0;
+        }
+
+        footer ul li a {
+          font-size: 14px;
+        }
+      }
     </style>
-</head>
+  </head>
+  <body>
+    
+  <div class="topnav">
+    <a href="/" class="name">Matthew Tarduno</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/cv">CV</a>
+      <a href="/research">Research</a>
+    </div>
+  </div>
+    
+    <hr>
 
-<body>
-
-    <div class="content">
+    <div class="main-content">
+      <div class="content">
         <!-- Content goes here -->
         <img src="https://matt-tarduno.github.io/assets/headshot.jpg" alt="Matt Tarduno headshot">
-        <p>I am an assistant professor of economics at the <a href="https://environment.harvard.edu/" target="_blank"><strong>University of Illinois at Chicago</strong></a>.</p>
-        <p>Prior to joining UIC, I was a postdoctoral fellow at the <a href="https://econ.uic.edu/" target="_blank"><strong>Harvard University Center for the Environment</strong></a>. I received my PhD in 2022 from <a href="https://are.berkeley.edu/" target="_blank"><strong>Berkeley ARE</strong></a>, where I was also a graduate student researcher at the <a href="https://ei.haas.berkeley.edu/" target="_blank"><strong>Energy Institute at Haas</strong></a>.</p>
+        <p>I am an assistant professor of economics at the <a href="https://econ.uic.edu/" target="_blank"><strong>University of Illinois at Chicago</strong></a>.</p>
+        <p>Prior to joining UIC, I was a postdoctoral fellow at the <a href="https://environment.harvard.edu/" target="_blank"><strong>Harvard University Center for the Environment</strong></a>. I received my PhD in 2022 from <a href="https://are.berkeley.edu/" target="_blank"><strong>Berkeley ARE</strong></a>, where I was also a graduate student researcher at the <a href="https://ei.haas.berkeley.edu/" target="_blank"><strong>Energy Institute at Haas</strong></a>.</p>
         <p>My fields are <strong>environmental economics</strong> and <strong>public economics</strong>; I study externalities and the policies aimed at addressing them.</p>
-    </div>
+      </div>
+    </div><!-- /.main-content -->
 
-</body>
+    <footer>
+      <ul>
+        <li><a href="mailto:tarduno@uic.edu">email</a></li>
+        <li><a href="https://github.com/Matt-Tarduno" target="_blank">github</a></li>
+        <li><a href="https://twitter.com/matttarduno" target="_blank">twitter</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
