@@ -16,30 +16,34 @@
         overflow-x: hidden; /* Prevent horizontal scroll on small devices */
       }
 
-      .topnav {
+            .topnav {
         background-color: #f8f9fa;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center horizontally */
         padding: 15px 30px;
-        padding-left: 50px; /* Add more padding on the left */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
       }
-
-      .topnav a {
-        font-size: 20px;
+      .topnav .name {
+        font-size: 24px;
         font-family: 'Noto Sans', sans-serif;
         font-weight: 400;
         color: black;
         text-decoration: none;
-        margin-right: 20px;
+        margin-bottom: 10px; /* Space between name and nav links */
       }
-
-      .topnav-right a {
+      .topnav .nav-links {
+        display: flex;
+        gap: 20px; /* Space between navigation links */
+      }
+      .topnav .nav-links a {
         font-size: 18px;
-        margin-left: 15px;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 400;
+        color: black;
+        text-decoration: none;
       }
-
       hr {
         margin: 20px 0;
         border: 0;
