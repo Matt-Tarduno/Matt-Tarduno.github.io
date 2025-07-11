@@ -89,13 +89,17 @@
       @media screen and (max-width: 768px) {
         .topnav {
           padding: 15px 25px;
-          padding-left: 35px;
-          flex-direction: column; /* Stack the navigation vertically on smaller screens */
         }
-
-        .topnav a {
-          font-size: 18px;
-          margin-bottom: 10px; /* Space out nav items on smaller screens */
+        .topnav .name {
+          font-size: 20px;
+          margin-bottom: 8px;
+        }
+        .topnav .nav-links {
+          flex-direction: column; /* Stack nav links vertically on smaller screens */
+          gap: 8px;
+        }
+        .topnav .nav-links a {
+          font-size: 16px;
         }
 
         .main-content {
@@ -120,11 +124,12 @@
       @media screen and (max-width: 480px) {
         .topnav {
           padding: 12px 20px;
-          padding-left: 25px;
         }
-
-        .topnav a {
-          font-size: 16px;
+        .topnav .name {
+          font-size: 18px;
+        }
+        .topnav .nav-links a {
+          font-size: 14px;
         }
 
         .main-content {
