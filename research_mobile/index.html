@@ -13,10 +13,48 @@ title: Research
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0 16px;
+      padding: 0;
       line-height: 1.6;
       background: #fff;
       color: #000;
+    }
+
+    .topnav {
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .topnav .name {
+      font-size: 24px;
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 400;
+      color: black;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    .topnav .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .topnav .nav-links a {
+      font-size: 18px;
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 400;
+      color: black;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
     }
 
     h1 {
@@ -28,15 +66,7 @@ title: Research
 
     p {
       font-size: 18px;
-      margin: 12px 0;
-    }
-
-    em {
-      font-style: italic;
-    }
-
-    strong {
-      font-weight: bold;
+      margin: 12px 0 24px 0;
     }
 
     a {
@@ -49,9 +79,22 @@ title: Research
     }
 
     @media screen and (max-width: 600px) {
-      body {
-        padding: 0 12px;
+      .topnav {
+        padding: 12px 16px;
       }
+
+      .topnav .name {
+        font-size: 20px;
+      }
+
+      .topnav .nav-links a {
+        font-size: 16px;
+      }
+
+      main {
+        padding: 16px;
+      }
+
       p {
         font-size: 16px;
       }
@@ -60,47 +103,24 @@ title: Research
 </head>
 <body>
 
-  <h1>Working Papers</h1>
+  <div class="topnav">
+    <a href="/" class="name">Matthew Tarduno</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/cv">CV</a>
+      <a href="/research">Research</a>
+    </div>
+  </div>
 
-  <p><strong><em>For Whom the Bridge Tolls: Congestion, Air Pollution, and Second-Best Road Pricing</em></strong></p>
-  <p><em>Revise and Resubmit, Journal of Political Economy Microeconomics.</em><br>
-     <em>Student prize finalist, 11th European Meeting of the Urban Economics Association.</em><br>
-     [<a href="https://matt-tarduno.github.io/jmp/" target="_blank">link</a>]
-  </p>
+  <main>
 
-  <p><strong><em>Should Cities Tax Uber and Lyft?</em></strong></p>
-  <p><em>Revise and Resubmit, Journal of Urban Economics.</em><br>
-     [<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4624940" target="_blank">link</a>]
-  </p>
+    <h1>Working Papers</h1>
 
-  <p><strong><em>Road Pricing with Green Vehicle Exemptions: Theory and Evidence</em></strong>
-     <span>(with Peter Nilsson and Sebastian Tebbe)</span></p>
-  <p><em>CESifo Working Paper No. 11038. Submitted.</em><br>
-     [<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4788237" target="_blank">link</a>]
-  </p>
+    <p>
+      <a href="https://matt-tarduno.github.io/jmp/" target="_blank"><strong><em>For Whom the Bridge Tolls: Congestion, Air Pollution, and Second-Best Road Pricing</em></strong></a><br>
+      <em>Revise and Resubmit, Journal of Political Economy Microeconomics.</em><br>
+      <em>Student prize finalist, 11th European Meeting of the Urban Economics Association.</em>
+    </p>
 
-  <p><strong><em>What drives support for inefficient environmental policies?</em></strong></p>
-  <p><em>Berkeley Law, Economics, and Politics Center Working Paper.</em><br>
-     [<a href="https://matt-tarduno.github.io/nevada/" target="_blank">link</a>]
-  </p>
-
-  <h1>Publications</h1>
-
-  <p><strong><em>The congestion costs of Uber and Lyft</em></strong> <span>Journal of Urban Economics (2021)</span></p>
-  <p>[<a href="https://doi.org/10.1016/j.jue.2020.103318" target="_blank">publication</a>] 
-     [<a href="https://matt-tarduno.github.io/tnc/" target="_blank">ungated</a>] 
-     [<a href="https://www.axios.com/uber-lyft-austin-traffic-8d7034d4-fe16-4a8f-873d-3a867b35afb0.html" target="_blank">Axios</a>] 
-     [<a href="https://usa.streetsblog.org/2021/02/25/talking-headways-podcast-less-congestion-after-ride-hailing-cessation/" target="_blank">Podcast</a>]
-  </p>
-
-  <h1>Work in Progress</h1>
-  <p><em>Equity Neutral Policy</em> <span>(with James Sallee)</span></p>
-  <p><em>Misperceptions About Air Pollution: Implications for Willingness to Pay and Environmental Inequality</em> <span>(with Reed Walker)</span></p>
-
-  <h1>Policy Reports</h1>
-  <p><em>Can targeted rebates foster equity in congestion pricing schemes?</em> <span>(with Jim Sallee)</span><br>
-     [<a href="https://escholarship.org/uc/item/7r64t085" target="_blank">Berkeley ITS Report</a>]
-  </p>
-
-</body>
-</html>
+    <p>
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4_
