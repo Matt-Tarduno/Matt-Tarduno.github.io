@@ -1,4 +1,3 @@
-<!-- KEEP FRONTMATTER INTACT -->
 ---
 layout: default
 title: Research
@@ -24,22 +23,18 @@ sitemap:
 </script>
 
 <style>
-    .paper-title {
+    .paper-title a {
         font-weight: bold;
-        text-decoration: none;
         color: black;
+        text-decoration: none;
     }
 
-    .paper-title:hover {
+    .paper-title a:hover {
         text-decoration: underline;
     }
 
-    .journal {
-        font-weight: bold;
-    }
-
-    .author-note {
-        color: #808080;
+    .journal-name {
+        font-weight: 500;
     }
 
     .abstract {
@@ -50,37 +45,30 @@ sitemap:
         display: none;
     }
 
-    .paper-meta {
+    .info-line {
         margin-left: 3em;
-    }
-
-    .blurb p {
-        font-size: 18px;
-        color: black;
     }
 </style>
 
 <div class="blurb">
     <h1>Working Papers</h1>
 
-    <p>
-        <a href="https://matt-tarduno.github.io/jmp/" target="_blank" class="paper-title">For Whom the Bridge Tolls: Congestion, Air Pollution, and Second-Best Road Pricing</a>
+    <p class="paper-title">
+        <a href="https://matt-tarduno.github.io/jmp/" target="_blank">For Whom the Bridge Tolls: Congestion, Air Pollution, and Second-Best Road Pricing</a>
     </p>
-    <p class="paper-meta">Revise and Resubmit, <span class="journal">Journal of Political Economy Microeconomics</span></p>
-    <p class="paper-meta">Student prize finalist, 11th European Meeting of the Urban Economics Association.
-        [<a href="https://matt-tarduno.github.io/jmp/" target="_blank">link</a>]
+    <p class="info-line">Revise and Resubmit, <span class="journal-name">Journal of Political Economy Microeconomics</span></p>
+    <p class="info-line">Student prize finalist, 11th European Meeting of the Urban Economics Association.
         [<a href="javascript:void(0)" onclick="toggleAbstract('abstract1')">abstract</a>]
     </p>
     <p id="abstract1" class="abstract">
-        Real-world congestion zones are imperfect...
+        Real-world congestion zones are imperfect because they charge heterogeneous road users uniform prices, and invite externality spillovers in space and time. I show that given these imperfections, calculating optimal prices requires (i) individual-level externalities, (ii) individual elasticities, and (iii) cross-price elasticities between priced and unpriced trips...
     </p>
     <br><br>
 
-    <p>
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4624940" target="_blank" class="paper-title">Should Cities Tax Uber and Lyft?</a>
+    <p class="paper-title">
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4624940" target="_blank">Should Cities Tax Uber and Lyft?</a>
     </p>
-    <p class="paper-meta">Revise and Resubmit, <span class="journal">Journal of Urban Economics</span>.
-        [<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4624940" target="_blank">link</a>]
+    <p class="info-line">Revise and Resubmit, <span class="journal-name">Journal of Urban Economics</span>
         [<a href="javascript:void(0)" onclick="toggleAbstract('abstract2')">abstract</a>]
     </p>
     <p id="abstract2" class="abstract">
@@ -88,23 +76,22 @@ sitemap:
     </p>
     <br><br>
 
-    <p>
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4788237" target="_blank" class="paper-title">Road Pricing with Green Vehicle Exemptions: Theory and Evidence</a><span class="author-note"> (with Peter Nilsson and Sebastian Tebbe)</span>
+    <p class="paper-title">
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4788237" target="_blank">Road Pricing with Green Vehicle Exemptions: Theory and Evidence</a>
+        <span style="color: #808080"> (with Peter Nilsson and Sebastian Tebbe)</span>
     </p>
-    <p class="paper-meta">CESifo Working Paper No. 11038. Submitted.
-        [<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4788237" target="_blank">link</a>]
-        [<a href="javascript:void(0)" onclick="toggleAbstract('abstract_stockholm')">abstract</a>]
+    <p class="info-line">CESifo Working Paper No. 11038. Submitted.
+        [<a href="javascript:void(0)" onclick="toggleAbstract('abstract3')">abstract</a>]
     </p>
-    <p id="abstract_stockholm" class="abstract">
-        We provide a framework for setting congestion charges...
+    <p id="abstract3" class="abstract">
+        We provide a framework for setting congestion charges that reflect emission and congestion externalities...
     </p>
     <br><br>
 
-    <p>
-        <a href="https://matt-tarduno.github.io/nevada/" target="_blank" class="paper-title">What Drives Support for Inefficient Environmental Policies?</a>
+    <p class="paper-title">
+        <a href="https://matt-tarduno.github.io/nevada/" target="_blank">What Drives Support for Inefficient Environmental Policies?</a>
     </p>
-    <p class="paper-meta">Berkeley Law, Economics, and Politics Center Working Paper.
-        [<a href="https://matt-tarduno.github.io/nevada/" target="_blank">link</a>]
+    <p class="info-line">Berkeley Law, Economics, and Politics Center Working Paper.
         [<a href="javascript:void(0)" onclick="toggleAbstract('abstract4')">abstract</a>]
     </p>
     <p id="abstract4" class="abstract">
@@ -114,39 +101,34 @@ sitemap:
 
 <div class="blurb">
     <h1>Publications</h1>
-    <p>
-        <a href="https://doi.org/10.1016/j.jue.2020.103318" target="_blank" class="paper-title">The Congestion Costs of Uber and Lyft</a><br>
-        <span class="journal">Journal of Urban Economics, 2021</span>
+
+    <p class="paper-title">
+        <a href="https://doi.org/10.1016/j.jue.2020.103318" target="_blank">The Congestion Costs of Uber and Lyft</a>
     </p>
-    <p class="paper-meta">
-        [<a href="https://doi.org/10.1016/j.jue.2020.103318" target="_blank">publication</a>]
+    <p class="info-line"><span class="journal-name">Journal of Urban Economics, 2021</span></p>
+    <p class="info-line">
         [<a href="https://matt-tarduno.github.io/tnc/" target="_blank">ungated</a>]
         [<a href="javascript:void(0)" onclick="toggleAbstract('abstract5')">abstract</a>]
-    </p>
-    <p id="abstract5" class="abstract">
-        I study the impact of transportation network companies (TNC) on traffic delays...
-    </p>
-    <p class="paper-meta">
-        Press:
         [<a href="https://www.axios.com/uber-lyft-austin-traffic-8d7034d4-fe16-4a8f-873d-3a867b35afb0.html" target="_blank">Axios</a>]
         [<a href="https://usa.streetsblog.org/2021/02/25/talking-headways-podcast-less-congestion-after-ride-hailing-cessation/" target="_blank">Podcast</a>]
+    </p>
+    <p id="abstract5" class="abstract">
+        I study the impact of transportation network companies (TNC) on traffic delays using a natural experiment created by the abrupt departure of Uber and Lyft from Austin, TX...
     </p>
 </div>
 
 <div class="blurb">
     <h1>Work in Progress</h1>
-    <p class="paper-title">Equity Neutral Policy <span class="author-note">(with James Sallee)</span></p>
-    <br><br>
-    <p class="paper-title">Misperceptions About Air Pollution: Implications for Willingness to Pay and Environmental Inequality <span class="author-note">(with Reed Walker)</span></p>
+
+    <p class="paper-title">Equity Neutral Policy<span style="color: #808080"> (with James Sallee)</span></p>
+    <p class="paper-title">Misperceptions About Air Pollution: Implications for Willingness to Pay and Environmental Inequality<span style="color: #808080"> (with Reed Walker)</span></p>
 </div>
 
 <div class="blurb">
     <h1>Policy Reports</h1>
-    <p>
-        <a href="https://escholarship.org/uc/item/7r64t085" target="_blank" class="paper-title">Can Targeted Rebates Foster Equity in Congestion Pricing Schemes?</a>
-        <span class="author-note"> (with Jim Sallee)</span>
-    </p>
-    <p class="paper-meta">
-        [<a href="https://escholarship.org/uc/item/7r64t085" target="_blank">Berkeley ITS Report</a>]
+
+    <p class="paper-title">
+        <a href="https://escholarship.org/uc/item/7r64t085" target="_blank">Can Targeted Rebates Foster Equity in Congestion Pricing Schemes?</a>
+        <span style="color: #808080"> (with Jim Sallee)</span>
     </p>
 </div>
